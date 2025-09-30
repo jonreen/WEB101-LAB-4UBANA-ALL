@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Package Tracker Ubana</title>
+  <link rel="stylesheet" href="" />
+</head>
+<body>
+  <div class="container">
+    <h1>📦 Logistics Package Tracker Ubana</h1>
+
+    <form id="packageForm">
+      <input type="text" id="id" placeholder="Package ID" required />
+      <input type="text" id="destination" placeholder="Destination" required />
+      <input type="number" id="weight" placeholder="Weight (kg)" required />
+      <select id="status" required>
+        <option value="">Status</option>
+        <option value="Delivered">Delivered</option>
+        <option value="In Transit">In Transit</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <button type="submit">Add Package</button>
+    </form>
+
+    <select id="actionSelector">
+      <option value="">-- Select Action --</option>
+      <option value="totalWeight">Calculate Total Weight</option>
+      <option value="filterStatus">Filter by Status</option>
+      <option value="heaviest">Find Heaviest Package</option>
+      <option value="groupDestination">Group by Destination</option>
+      <option value="fetchNew">Simulate Fetching New Packages</option>
+    </select>
+    <button onclick="runAction()">Run</button>
+
+    <div id="output" class="output"></div>
+  </div>
+
+  <script src="apply.js"></script>
+</body>
+</html>
